@@ -18,3 +18,7 @@ function last(x) {
 }
 
 // or
+
+const lastChar = (str) => (str[str.length - 1] || '');
+const sorter = (a, b) => lastChar(a).localeCompare(lastChar(b));
+const last = (str) => str.split(' ').sort(sorter);
